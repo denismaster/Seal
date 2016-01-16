@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Seal.Core
+
+namespace Seal
 {
     /// <summary>
     /// Root class of figures and animation hierarchy
     /// </summary>
     public abstract class Object
     {
+        
         private string _name;
         /// <summary>
         /// Name of the object
@@ -23,7 +21,7 @@ namespace Seal.Core
             }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if(!String.IsNullOrEmpty(value))
                 {
                     _name = value;
                 }

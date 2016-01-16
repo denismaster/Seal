@@ -9,7 +9,7 @@ namespace Seal
     public struct Location
     {
         public float X, Y;
-        public Location(float x, float y)
+        public Location(float x,float y)
         {
             X = x;
             Y = y;

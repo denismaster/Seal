@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Seal;
+
 using Seal.Geometries;
 namespace Seal.Platform
 {
-    public class DrawingContext : IDisposable
+    public class DrawingContext:IDisposable
     {
         private readonly IDrawingContextImpl drawingContext;
 

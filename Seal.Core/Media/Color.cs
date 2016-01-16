@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.Reflection;
-
 namespace Seal
 {
     public struct Color
@@ -100,7 +99,7 @@ namespace Seal
                 }
                 else if (s.Length != 9)
                 {
-                    throw new FormatException(String.Format("Invalid color string: '{0}'.", s));
+                    throw new FormatException(String.Format("Invalid color string: '{0}'.",s));
                 }
 
                 return FromUInt32(uint.Parse(s.Substring(1), NumberStyles.HexNumber, CultureInfo.InvariantCulture) | or);
@@ -117,7 +116,7 @@ namespace Seal
                 }
                 else
                 {
-                    throw new FormatException(String.Format("Invalid color string: '{0}'.", s));
+                    throw new FormatException(String.Format("Invalid color string: '{0}'.",s));
                 }
             }
         }
