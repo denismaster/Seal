@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3B4F1FF-8E94-46FE-AE39-9DC96DF6BFCC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seal</RootNamespace>
+    <AssemblyName>Seal.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Geometries\EllipseGeometry.cs" />
+    <Compile Include="Geometries\Base\GeometryParser.cs" />
+    <Compile Include="Geometries\PathGeometry.cs" />
+    <Compile Include="Geometries\Base\IGeometry.cs" />
+    <Compile Include="Geometries\Base\IGeometryManager.cs" />
+    <Compile Include="Geometries\Base\IPath.cs" />
+    <Compile Include="Geometries\Base\IPathBuilder.cs" />
+    <Compile Include="Geometries\RectangleGeometry.cs" />
+    <Compile Include="Geometries\RoundedRectangleGeometry.cs" />
+    <Compile Include="Images\IBitmap.cs" />
+    <Compile Include="Images\IBitmapProvider.cs" />
+    <Compile Include="Images\ISaveableBitmap.cs" />
+    <Compile Include="Media\Color.cs" />
+    <Compile Include="Media\Colors.cs" />
+    <Compile Include="Math\Location.cs" />
+    <Compile Include="Math\Matrix.cs" />
+    <Compile Include="Math\Point.cs" />
+    <Compile Include="Math\Rectangle.cs" />
+    <Compile Include="Math\Size.cs" />
+    <Compile Include="Math\Vector2D.cs" />
+    <Compile Include="Media\IBrush.cs" />
+    <Compile Include="Media\ISolidColorBrush.cs" />
+    <Compile Include="Platform\DrawingContext.cs" />
+    <Compile Include="Platform\IBitmapRenderTarget.cs" />
+    <Compile Include="Platform\Handle\PlatformHandle.cs" />
+    <Compile Include="Platform\Handle\PlatformType.cs" />
+    <Compile Include="Platform\IDrawingContextImpl.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="Platform\IEngine.cs" />
+    <Compile Include="Platform\IRenderTarget.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Text\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
