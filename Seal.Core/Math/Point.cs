@@ -10,7 +10,7 @@ namespace Seal
     {
         public int X, Y;
 
-        public Point(int x, int y)
+        public Point(int x,int y)
         {
             X = x;
             Y = y;

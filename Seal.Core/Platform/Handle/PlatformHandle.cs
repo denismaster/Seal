@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace Seal.Media
+
+namespace Seal.Platform
 {
-    public interface ISolidColorBrush:IBrush
+    public interface IPlatformHandle
     {
-        Color Color
+        IntPtr Handle
         {
             get;
-            set;
+        }
+
+        PlatformType Type
+        {
+            get;
         }
     }
 }

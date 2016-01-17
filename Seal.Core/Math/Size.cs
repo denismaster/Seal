@@ -9,7 +9,7 @@ namespace Seal
     public struct Size
     {
         public float Width, Height;
-        public Size(float w, float h)
+        public Size(float w,float h)
         {
             Width = w;
             Height = h;

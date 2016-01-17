@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B3B4F1FF-8E94-46FE-AE39-9DC96DF6BFCC}</ProjectGuid>
+    <ProjectGuid>{7E119E26-1EB9-46C2-98E2-D7E46B4F4ED9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Seal</RootNamespace>
-    <AssemblyName>Seal.Core</AssemblyName>
+    <RootNamespace>Seal.Control</RootNamespace>
+    <AssemblyName>Seal.Control</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,40 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Geometries\EllipseGeometry.cs" />
-    <Compile Include="Geometries\Base\GeometryParser.cs" />
-    <Compile Include="Geometries\PathGeometry.cs" />
-    <Compile Include="Geometries\Base\IGeometry.cs" />
-    <Compile Include="Geometries\Base\IGeometryManager.cs" />
-    <Compile Include="Geometries\Base\IPath.cs" />
-    <Compile Include="Geometries\Base\IPathBuilder.cs" />
-    <Compile Include="Geometries\RectangleGeometry.cs" />
-    <Compile Include="Geometries\RoundedRectangleGeometry.cs" />
-    <Compile Include="Images\IBitmap.cs" />
-    <Compile Include="Images\IBitmapProvider.cs" />
-    <Compile Include="Images\ISaveableBitmap.cs" />
-    <Compile Include="Media\Color.cs" />
-    <Compile Include="Media\Colors.cs" />
-    <Compile Include="Math\Location.cs" />
-    <Compile Include="Math\Matrix.cs" />
-    <Compile Include="Math\Point.cs" />
-    <Compile Include="Math\Rectangle.cs" />
-    <Compile Include="Math\Size.cs" />
-    <Compile Include="Math\Vector2D.cs" />
-    <Compile Include="Media\IBrush.cs" />
-    <Compile Include="Media\ISolidColorBrush.cs" />
-    <Compile Include="Platform\DrawingContext.cs" />
-    <Compile Include="Platform\IBitmapRenderTarget.cs" />
-    <Compile Include="Platform\Handle\PlatformHandle.cs" />
-    <Compile Include="Platform\Handle\PlatformType.cs" />
-    <Compile Include="Platform\IDrawingContextImpl.cs" />
-    <Compile Include="Object.cs" />
-    <Compile Include="Platform\IEngine.cs" />
-    <Compile Include="Platform\IRenderTarget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Text\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
