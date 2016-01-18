@@ -32,14 +32,16 @@ namespace Seal.Platform.Direct2D
             }
         }
 
-        public void DrawLine(Location From, Location To)
+        public void DrawLine(Location From, Location To, Seal.Media.IBrush brush)
         {
-            _renderTarget.DrawLine(From.ToD2D(), To.ToD2D(), brush);
+            var pBrush = brush as Media.Brush;
+            if (pBrush != null)
+                _renderTarget.DrawLine(From.ToD2D(), To.ToD2D(), pBrush.D2DBrush);
         }
 
         public void DrawRectangle(Rectangle rect, Location where)
         {
-            
+
             _renderTarget.DrawRectangle(rect.ToD2D(), brush);
         }
 
@@ -78,9 +80,9 @@ namespace Seal.Platform.Direct2D
             //Здесь стоит проверка, не решит ли пользователь смешать два движка сразу.
             //Тогда теоретически может быть так, что p будет null, так что лучше проверить.
             var pBrush = brush as Media.Brush;
-            if (p != null&&pBrush!=null)
+            if (p != null && pBrush != null)
             {
-                _renderTarget.DrawGeometry(p.D2DPath,pBrush.D2DBrush, 1);
+                _renderTarget.DrawGeometry(p.D2DPath, pBrush.D2DBrush, 1);
             }
         }
 
@@ -96,5 +98,15 @@ namespace Seal.Platform.Direct2D
             throw new NotImplementedException();
         }
 
+
+
+        public void DrawBitmap(Images.IBitmap bitmap)
+        {
+            var bmp = bitmap as Imaging.Bitmap;
+            if(bmp!=null)
+            {
+                _renderTarget.DrawBitmap(bmp.D2DBitmap, 1, D2D.BitmapInterpolationMode.Linear);
+            }
+        }
     }
 }

@@ -57,5 +57,11 @@ namespace Seal.Platform.Direct2D
         {
             return new Media.SolidColorBrush(this._renderTarget, c);
         }
+
+
+        public Images.IBitmapProvider CreateBitmapProvider()
+        {
+            return new Imaging.WicBitmapProvider(this._renderTarget);
+        }
     }
 }

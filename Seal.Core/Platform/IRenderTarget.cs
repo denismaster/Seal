@@ -6,6 +6,7 @@ namespace Seal.Platform
     {
         DrawingContext CreateDrawingContext();
         ISolidColorBrush CreateSolidColorBrush(Color c);
+        Images.IBitmapProvider CreateBitmapProvider();
         void Resize(int width, int height);
     }
 }

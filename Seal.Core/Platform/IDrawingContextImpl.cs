@@ -15,11 +15,12 @@ namespace Seal.Platform
         void BeginDraw();
         void EndDraw();
         void Clear(Color c);
-        void DrawLine(Location From, Location To);
+        void DrawLine(Location From, Location To,Seal.Media.IBrush brush);
         void DrawRectangle(Rectangle rect, Location where);
         void DrawEllipse(Rectangle ellipse, Location where);
         void DrawPath(Geometries.IPath path, Seal.Media.IBrush brush);
         void DrawRoundedRectangle(Rectangle rect, Location where,float alpha);
         void DrawGeometry(Geometries.IGeometry g, Geometries.GeometryType type);
+        void DrawBitmap(Images.IBitmap bitmap);
     }
 }

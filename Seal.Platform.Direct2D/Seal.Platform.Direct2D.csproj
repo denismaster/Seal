@@ -59,6 +59,8 @@
     <Compile Include="Geometries\GeometryManager.cs" />
     <Compile Include="Geometries\Path.cs" />
     <Compile Include="Geometries\PathBuilder.cs" />
+    <Compile Include="Imaging\Bitmap.cs" />
+    <Compile Include="Imaging\WicBitmapProvider.cs" />
     <Compile Include="Media\Brush.cs" />
     <Compile Include="Media\SolidColorBrush.cs" />
     <Compile Include="PlatformHandle.cs" />
