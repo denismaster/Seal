@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -88,11 +88,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Seal.Core\Seal.Core.csproj">
-      <Project>{b3b4f1ff-8e94-46fe-ae39-9dc96df6bfcc}</Project>
+      <Project>{B3B4F1FF-8E94-46FE-AE39-9DC96DF6BFCC}</Project>
       <Name>Seal.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Seal.Platform.Direct2D\Seal.Platform.Direct2D.csproj">
-      <Project>{f9d6167e-b5a5-4c36-ab3f-2bedbb13020a}</Project>
+      <Project>{F9D6167E-B5A5-4C36-AB3F-2BEDBB13020A}</Project>
       <Name>Seal.Platform.Direct2D</Name>
     </ProjectReference>
   </ItemGroup>
