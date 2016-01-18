@@ -31,9 +31,9 @@ namespace Seal.Platform
         {
             this.drawingContext.EndDraw();
         }
-        public void DrawLine(Location from, Location to)
+        public void DrawLine(Location from, Location to,Media.IBrush brush)
         {
-            drawingContext.DrawLine(from, to);
+            drawingContext.DrawLine(from, to,brush );
         }
         public void DrawRectangle(Rectangle rect)
         {
@@ -50,6 +50,10 @@ namespace Seal.Platform
         public void DrawPath(IPath path, Media.IBrush brush)
         {
             drawingContext.DrawPath(path, brush);
+        }
+        public void DrawBitmap(Images.IBitmap bitmap)
+        {
+            drawingContext.DrawBitmap(bitmap);
         }
         public void Dispose()
         {

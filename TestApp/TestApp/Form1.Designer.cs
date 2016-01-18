@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(495, 371);
             this.Controls.Add(this.sealControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "The future of Seal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
