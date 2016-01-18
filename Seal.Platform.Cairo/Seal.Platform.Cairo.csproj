@@ -11,6 +11,8 @@
     <AssemblyName>Seal.Platform.Cairo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,11 +71,5 @@
   <ItemGroup>
     <Folder Include="Geometries\" />
     <Folder Include="Media\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Seal.Core\Seal.Core.csproj">
-      <Project>{B3B4F1FF-8E94-46FE-AE39-9DC96DF6BFCC}</Project>
-      <Name>Seal.Core</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>
