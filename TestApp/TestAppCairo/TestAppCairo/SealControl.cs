@@ -11,11 +11,13 @@ namespace TestAppCairo
 	{
 		IEngine engine;
 		IRenderTarget target;
-
+		PathGeometry p;
 		public SealControl ()
 		{
 			engine = new Engine();
 			target = engine.CreateRenderTarget(this, this.Allocation.Width, this.Allocation.Height);
+			var gm = engine.CreateGeometryManager();
+			p = new PathGeometry(gm.CreatePath("M 100,200 C 200,100 100,100 100,100 C 100,200 200,200 200,200"));
 		}
 
 		protected override bool OnButtonPressEvent (Gdk.EventButton ev)
@@ -29,8 +31,8 @@ namespace TestAppCairo
 			base.OnExposeEvent (ev);
 			using (var ctx = target.CreateDrawingContext())
 			{
-				ctx.Clear (Colors.SkyBlue);
-				ctx.DrawLine (new Location(0,0), new Location(100,100));
+				ctx.Clear (Colors.White);
+				ctx.DrawPath (p.Path, null);
 			};
 			return true;
 		}
