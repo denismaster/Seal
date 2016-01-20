@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/denismaster/Seal.svg?branch=master)](https://travis-ci.org/denismaster/Seal)
 # Seal Graphics Library
 Seal Graphics Library is a new cross-platform graphics and graph library for .NET and Mono.
 
