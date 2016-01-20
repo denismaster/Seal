@@ -21,6 +21,10 @@ namespace Seal.Platform.Cairo
 				(double)(color.B / 255.0),
 				(double)(color.A / 255.0));
 		}
+		public static Seal.Rectangle ToSeal(this CairoVars.Rectangle rect)
+		{
+			return new Seal.Rectangle((float)rect.X, (float)rect.Y, (float)rect.Width,(float) rect.Height);
+		}
 	}
 }
 

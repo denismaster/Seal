@@ -5,6 +5,16 @@ namespace Seal.Platform.Cairo
 {
 	public class DrawingContext:IDrawingContextImpl
 	{
+		public void DrawLine (Location From, Location To, Seal.Media.IBrush brush)
+		{
+			DrawLine (From, To);
+		}
+
+		public void DrawBitmap (Seal.Images.IBitmap bitmap)
+		{
+			throw new NotImplementedException ();
+		}
+
 		private readonly Context _context;
 
 		public DrawingContext(Gdk.Drawable drawable)
@@ -53,7 +63,12 @@ namespace Seal.Platform.Cairo
 
 		public void DrawPath (Seal.Geometries.IPath path, Seal.Media.IBrush brush)
 		{
-			throw new NotImplementedException ();
+			var impl = path as Seal.Platform.Cairo.Path;
+			if (impl != null) 
+			{
+				_context.AppendPath(impl.CairoPath);
+				_context.Stroke ();
+			}
 		}
 
 		public void DrawRoundedRectangle (Rectangle rect, Location where, float alpha)

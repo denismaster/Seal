@@ -6,6 +6,11 @@ namespace Seal.Platform.Cairo
 {
 	public class RenderTarget:IRenderTarget
 	{
+		public Seal.Images.IBitmapProvider CreateBitmapProvider ()
+		{
+			throw new NotImplementedException ();
+		}
+
 		private readonly Gtk.Widget  _window;
 
 		public RenderTarget (Gtk.Widget window)

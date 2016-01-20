@@ -28,7 +28,7 @@ namespace Seal.Platform.Cairo
 
 		public Seal.Geometries.IGeometryManager CreateGeometryManager ()
 		{
-			throw new NotImplementedException ();
+			return new GeometryManager ();
 		}
 
 		#endregion
