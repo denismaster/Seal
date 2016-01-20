@@ -22,17 +22,17 @@ namespace TestApp
             target = engine.CreateRenderTarget(this, this.Width, this.Height);
             var gm = engine.CreateGeometryManager();
             p = new PathGeometry(gm.CreatePath("M 100,200 C 200,100 100,100 100,100 C 100,200 200,200 200,200"));
-            brush = target.CreateSolidColorBrush(Seal.Colors.DarkGoldenrod);
+            brush = target.CreateSolidColorBrush(Seal.Colors.Black);
             brush1 = target.CreateSolidColorBrush(Seal.Colors.Red);
             var provider = target.CreateBitmapProvider();
-            if (!DesignMode)
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    bitmap = provider.Get(ofd.FileName);
-                }
-            }
+            //if (!DesignMode)
+            //{
+            //    OpenFileDialog ofd = new OpenFileDialog();
+            //    if (ofd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        bitmap = provider.Get(ofd.FileName);
+            //    }
+            //}
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -41,8 +41,8 @@ namespace TestApp
             {
                 ctx.BeginDraw();
                 ctx.Clear(Seal.Colors.White);
-                ctx.DrawBitmap(bitmap);
-                ctx.DrawLine(new Seal.Location(100, 200), new Seal.Location(200, 100), brush1);
+               // ctx.DrawBitmap(bitmap);
+               // ctx.DrawLine(new Seal.Location(100, 200), new Seal.Location(200, 100), brush1);
                 ctx.DrawPath(p.Path, this.brush);
                 
             };
