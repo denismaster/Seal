@@ -20,7 +20,6 @@ namespace Seal.Platform
         void DrawEllipse(Rectangle ellipse, Location where);
         void DrawPath(Geometries.IPath path, Seal.Media.IBrush brush);
         void DrawRoundedRectangle(Rectangle rect, Location where,float alpha);
-        void DrawGeometry(Geometries.IGeometry g, Geometries.GeometryType type);
         void DrawBitmap(Images.IBitmap bitmap);
     }
 }

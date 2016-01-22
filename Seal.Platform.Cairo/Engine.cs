@@ -26,7 +26,7 @@ namespace Seal.Platform.Cairo
 			throw new NotImplementedException ();
 		}
 
-		public Seal.Geometries.IGeometryManager CreateGeometryManager ()
+		public Seal.Geometries.IPathProvider CreateGeometryManager ()
 		{
 			return new GeometryManager ();
 		}

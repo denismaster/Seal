@@ -23,10 +23,6 @@ namespace Seal.Platform
         {
             this.drawingContext.Clear(c);
         }
-        public void DrawGeometry(Geometries.IGeometry geometry)
-        {
-            throw new NotImplementedException();
-        }
         public void EndDraw()
         {
             this.drawingContext.EndDraw();

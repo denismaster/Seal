@@ -12,7 +12,7 @@ namespace TestApp
         IRenderTarget target;
         IBrush brush;
         IBrush brush1;
-        PathGeometry p;
+        IPath p;
         Seal.Images.IBitmap bitmap;
         public SealControl()
         {
@@ -21,7 +21,7 @@ namespace TestApp
             engine = new Engine();
             target = engine.CreateRenderTarget(this, this.Width, this.Height);
             var gm = engine.CreateGeometryManager();
-            p = new PathGeometry(gm.CreatePath("M 100,200 C 200,100 100,100 100,100 C 100,200 200,200 200,200"));
+            p = gm.CreatePath("M 100,200 C 200,100 100,100 100,100 C 100,200 200,200 200,200");
             brush = target.CreateSolidColorBrush(Seal.Colors.Black);
             brush1 = target.CreateSolidColorBrush(Seal.Colors.Red);
             var provider = target.CreateBitmapProvider();
@@ -43,7 +43,7 @@ namespace TestApp
                 ctx.Clear(Seal.Colors.White);
                // ctx.DrawBitmap(bitmap);
                // ctx.DrawLine(new Seal.Location(100, 200), new Seal.Location(200, 100), brush1);
-                ctx.DrawPath(p.Path, this.brush);
+                ctx.DrawPath(p, this.brush);
                 
             };
         }

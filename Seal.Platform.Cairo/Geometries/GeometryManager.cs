@@ -2,7 +2,7 @@
 using Seal.Geometries;
 namespace Seal.Platform.Cairo
 {
-	public class GeometryManager:IGeometryManager
+	public class GeometryManager:IPathProvider
 	{
 		public GeometryManager ()
 		{

@@ -76,11 +76,6 @@ namespace Seal.Platform.Cairo
 			throw new NotImplementedException ();
 		}
 
-		public void DrawGeometry (Seal.Geometries.IGeometry g, Seal.Geometries.GeometryType type)
-		{
-			throw new NotImplementedException ();
-		}
-
 		public Matrix Transform {
 			get {
 				throw new NotImplementedException ();

@@ -8,7 +8,7 @@ using Seal.Geometries;
 
 namespace Seal.Platform.Direct2D.Geometries
 {
-    public class GeometryManager : IGeometryManager
+    public class GeometryManager : IPathProvider
     {
         private readonly D2D.Factory factory;
         public GeometryManager(D2D.Factory factory)
@@ -17,10 +17,6 @@ namespace Seal.Platform.Direct2D.Geometries
                 this.factory = factory;
             else
                 throw new ArgumentNullException();
-        }
-        public IGeometry CreateGeometry(GeometryType type)
-        {
-            throw new NotImplementedException();
         }
 
         public IPath CreatePath(string data)

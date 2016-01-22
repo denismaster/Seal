@@ -11,6 +11,6 @@ namespace Seal.Platform
     {
         IRenderTarget CreateRenderTarget(IPlatformHandle handle, int width, int height);
         IBitmapProvider CreateBitmapProvider();
-        Geometries.IGeometryManager CreateGeometryManager();
+        Geometries.IPathProvider CreateGeometryManager();
     }
 }

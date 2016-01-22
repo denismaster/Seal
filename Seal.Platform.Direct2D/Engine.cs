@@ -25,7 +25,7 @@ namespace Seal.Platform.Direct2D
             else
                 throw new NotSupportedException(String.Format("Cannot create {0} target with D2D Engine",handle.Type));
         }
-        public Seal.Geometries.IGeometryManager CreateGeometryManager()
+        public Seal.Geometries.IPathProvider CreateGeometryManager()
         {
             return new Geometries.GeometryManager(this.s_d2D1Factory);
         }

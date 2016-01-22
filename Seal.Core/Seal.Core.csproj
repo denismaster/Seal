@@ -39,15 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Geometries\EllipseGeometry.cs" />
     <Compile Include="Geometries\Base\GeometryParser.cs" />
-    <Compile Include="Geometries\PathGeometry.cs" />
-    <Compile Include="Geometries\Base\IGeometry.cs" />
-    <Compile Include="Geometries\Base\IGeometryManager.cs" />
+    <Compile Include="Geometries\Base\IPathProvider.cs" />
     <Compile Include="Geometries\Base\IPath.cs" />
     <Compile Include="Geometries\Base\IPathBuilder.cs" />
-    <Compile Include="Geometries\RectangleGeometry.cs" />
-    <Compile Include="Geometries\RoundedRectangleGeometry.cs" />
     <Compile Include="Images\IBitmap.cs" />
     <Compile Include="Images\IBitmapProvider.cs" />
     <Compile Include="Images\ISaveableBitmap.cs" />
@@ -66,7 +61,6 @@
     <Compile Include="Platform\Handle\PlatformHandle.cs" />
     <Compile Include="Platform\Handle\PlatformType.cs" />
     <Compile Include="Platform\IDrawingContextImpl.cs" />
-    <Compile Include="Object.cs" />
     <Compile Include="Platform\IEngine.cs" />
     <Compile Include="Platform\IRenderTarget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

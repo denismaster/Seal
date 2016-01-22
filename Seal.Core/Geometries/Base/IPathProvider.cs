@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Seal.Geometries
 {
-    public interface IGeometryManager
+    public interface IPathProvider
     {
-        IGeometry CreateGeometry(GeometryType type);
         IPath CreatePath(string data);
     }
 }

@@ -93,11 +93,6 @@ namespace Seal.Platform.Direct2D
         }
 
 
-        public void DrawGeometry(Seal.Geometries.IGeometry g, Seal.Geometries.GeometryType type)
-        {
-            throw new NotImplementedException();
-        }
-
 
 
         public void DrawBitmap(Images.IBitmap bitmap)
