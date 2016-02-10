@@ -57,5 +57,21 @@ namespace Seal.Platform.Direct2D
             byte blue = (byte)(color.B*255);
             return Color.FromArgb(alpha, red, green, blue);
         }
+        public static D2D.RawMatrix3x2 ToD2D(this Seal.Matrix matrix)
+        {
+            return new D2D.RawMatrix3x2()
+            {
+                M11 = matrix.M11,
+                M12 = matrix.M12,
+                M21 = matrix.M21,
+                M22 = matrix.M22,
+                M31 = matrix.M31,
+                M32 = matrix.M32
+            };
+        }
+        public static Seal.Matrix ToSeal(this D2D.RawMatrix3x2 matrix)
+        {
+            return new Matrix(matrix.M11, matrix.M12, matrix.M21, matrix.M22, matrix.M31, matrix.M32);
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace Seal.Platform.Direct2D
                 hwndProperties);
         }
 
-        public Seal.Platform.DrawingContext CreateDrawingContext()
+        public Seal.Platform.IDrawingContext CreateDrawingContext()
         {
             return new Platform.DrawingContext(new Direct2D.DrawingContext(_renderTarget));
         }
@@ -51,14 +51,17 @@ namespace Seal.Platform.Direct2D
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _renderTarget.Dispose();
         }
         public Seal.Media.ISolidColorBrush CreateSolidColorBrush(Color c)
         {
             return new Media.SolidColorBrush(this._renderTarget, c);
         }
 
-
+        public Seal.Geometries.IPathProvider CreateGeometryManager()
+        {
+            return new Geometries.GeometryManager(this._renderTarget.Factory);
+        }
         public Images.IBitmapProvider CreateBitmapProvider()
         {
             return new Imaging.WicBitmapProvider(this._renderTarget);

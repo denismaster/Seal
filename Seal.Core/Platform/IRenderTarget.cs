@@ -4,9 +4,10 @@ namespace Seal.Platform
 {
     public interface IRenderTarget : IDisposable
     {
-        DrawingContext CreateDrawingContext();
+        IDrawingContext CreateDrawingContext();
         ISolidColorBrush CreateSolidColorBrush(Color c);
         Images.IBitmapProvider CreateBitmapProvider();
+        Geometries.IPathProvider CreateGeometryManager();
         void Resize(int width, int height);
     }
 }

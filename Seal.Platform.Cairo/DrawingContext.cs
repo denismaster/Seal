@@ -3,7 +3,7 @@ using Seal;
 using global::Cairo;
 namespace Seal.Platform.Cairo
 {
-	public class DrawingContext:IDrawingContextImpl
+	public class DrawingContext:IDrawingContext
 	{
 		public void DrawLine (Location From, Location To, Seal.Media.IBrush brush)
 		{

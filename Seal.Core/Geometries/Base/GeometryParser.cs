@@ -22,7 +22,7 @@ namespace Seal.Geometries
             { 'V', Command.VerticalLine },
             { 'v', Command.VerticalLineRelative },
             { 'C', Command.CubicBezierCurve },
-            { 'c', Command.CubicBezierCurveRelative },
+            { 'c', Command.CubicBezierCurve },
             { 'Z', Command.Close },
             { 'z', Command.Close },
         };

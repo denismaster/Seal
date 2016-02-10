@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using Seal.Geometries;
 namespace Seal.Platform
 {
-    public class DrawingContext:IDisposable
+    public class DrawingContext:IDisposable,IDrawingContext
     {
-        private readonly IDrawingContextImpl drawingContext;
+        private readonly IDrawingContext drawingContext;
 
-        public DrawingContext(IDrawingContextImpl impl)
+        public DrawingContext(IDrawingContext impl)
         {
             this.drawingContext = impl;
         }
@@ -27,9 +27,9 @@ namespace Seal.Platform
         {
             this.drawingContext.EndDraw();
         }
-        public void DrawLine(Location from, Location to,Media.IBrush brush)
+        public void DrawLine(Location from, Location to,Media.IBrush brush,float width=1)
         {
-            drawingContext.DrawLine(from, to,brush );
+            drawingContext.DrawLine(from, to,brush,width);
         }
         public void DrawRectangle(Rectangle rect)
         {
@@ -43,9 +43,9 @@ namespace Seal.Platform
         {
             throw new NotImplementedException();
         }
-        public void DrawPath(IPath path, Media.IBrush brush)
+        public void DrawPath(IPath path, Media.IBrush brush,float width=1.0f)
         {
-            drawingContext.DrawPath(path, brush);
+            drawingContext.DrawPath(path, brush,width);
         }
         public void DrawBitmap(Images.IBitmap bitmap)
         {
@@ -54,6 +54,49 @@ namespace Seal.Platform
         public void Dispose()
         {
             drawingContext.Dispose();
+        }
+
+        public Matrix Transform
+        {
+            get
+            {
+                return drawingContext.Transform;
+            }
+            set
+            {
+                drawingContext.Transform = value;
+            }
+        }
+
+        public void DrawRectangle(Rectangle rect, Location where)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawEllipse(Rectangle ellipse, Location where)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawRoundedRectangle(Rectangle rect, Location where, float alpha)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void DrawRectangle(Rectangle rect, Location where, Media.IBrush brush, float width = 1.0f)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FillPath(IPath path, Media.IBrush brush)
+        {
+            drawingContext.FillPath(path, brush);
+        }
+
+        public void FillRectangle(Rectangle rect, Location where, Media.IBrush brush)
+        {
+            throw new NotImplementedException();
         }
     }
 }

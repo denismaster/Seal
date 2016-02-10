@@ -10,7 +10,5 @@ namespace Seal.Platform
     public interface IEngine
     {
         IRenderTarget CreateRenderTarget(IPlatformHandle handle, int width, int height);
-        IBitmapProvider CreateBitmapProvider();
-        Geometries.IPathProvider CreateGeometryManager();
     }
 }

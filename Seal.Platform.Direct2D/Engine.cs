@@ -25,14 +25,6 @@ namespace Seal.Platform.Direct2D
             else
                 throw new NotSupportedException(String.Format("Cannot create {0} target with D2D Engine",handle.Type));
         }
-        public Seal.Geometries.IPathProvider CreateGeometryManager()
-        {
-            return new Geometries.GeometryManager(this.s_d2D1Factory);
-        }
-        public Images.IBitmapProvider CreateBitmapProvider()
-        {
-            throw new NotImplementedException();
-        }
         public Seal.Geometries.IPath CreateStreamGeometry()
         {
             return new Path(this.s_d2D1Factory);
